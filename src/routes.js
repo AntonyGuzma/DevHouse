@@ -1,8 +1,9 @@
 const {Router} = require('express')
+const SessioController = require('./controller/SessionController')
 const routes = Router()
 
-routes.get('/', (req, res) => {
-    return res.json({ok: false})
-})
+routes.post('/sessions', SessioController.store)
+
+
 
 module.exports = routes
